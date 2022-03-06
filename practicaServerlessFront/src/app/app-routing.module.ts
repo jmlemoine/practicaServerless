@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { CreateComponent } from './reserva/create.component';
 import { DetailComponent } from './reserva/detail.component';
 import { ListComponent } from './reserva/list.component';

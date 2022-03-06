@@ -16,10 +16,28 @@
                         [(ngModel)]="laboratorio" required autocomplete="off">
                 </div>
                 <div class="form-group">
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="picker" type="text" class="form-control" 
+                        id="fechayhora" name="fechayhora" placeholder="Choose a Date"
+                        [(ngModel)]="fechayhora" readonly required autocomplete="off">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                
+                <mat-form-field>
+                    <input matInput name="selected_time_A" [(ngModel)]="fechayhoraI" [ngxMatTimepicker]="pickerA" placeholder="Choose a Time"
+                        readonly required autocomplete="off" />
+                    <mat-icon matSuffix (click)="pickerA.open()">
+                        
+                    </mat-icon>
+                </mat-form-field>
+                <ngx-mat-timepicker #pickerA></ngx-mat-timepicker>
+                <!--<div class="form-group">
                     <label for="fechayhora">Fecha y Hora</label>
                     <input type="text" class="form-control" id="fechayhora" name="fechayhora"
                         [(ngModel)]="fechayhora" required autocomplete="off">
-                </div>
+                </div>-->
                 <button class="btn btn-outline-success w-100 mt-3" [disabled]="!f.valid">Create</button>
                 <button class="btn btn-outline-primary w-100 mt-3" routerLink='/'><i
                         class="fas fa-arrow-alt-circle-left"></i> Volver</button>
