@@ -21,13 +21,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [AppComponent, ListComponent, CreateComponent, UpdateComponent, DetailComponent],
-  imports: [BrowserModule, NgxSpinnerModule, BrowserAnimationsModule,
+  imports: [BrowserModule, NgxSpinnerModule, BrowserAnimationsModule, HttpClientModule,
     HttpClientModule, FormsModule, AppRoutingModule, /*ReactiveFormsModule,*/
     MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule,
-    NgxMaterialTimepickerModule, NgxMatTimepickerModule],
+    NgxMaterialTimepickerModule, NgxMatTimepickerModule, ToastrModule.forRoot()],
   providers: [DatePipe],
   bootstrap: [AppComponent],
 })
